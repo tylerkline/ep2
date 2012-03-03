@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Backoffice Tests</title>
+
+	<!--<link rel="stylesheet" href="css/jquery-ui-1.8.6.custom.css" type="text/css" charset="utf-8"/>-->
+
+	<script data-main="js/test_backoffice.js" src="js/require-jquery.js"></script>
+
+	<style type="text/css">
+		body {
+			background-color: rgb(255, 255, 223);
+		}
+	</style>
+</head>
+
+<body>
+
+<button id="sendCommand" type="button">Send Command</button>
+<button id="sendCommandWebSocket" type="button">Send Command WebSocket</button>
+<button id="masterConnect" type="button">Connect Master</button>
+<button id="masterDisconnect" type="button">Disconnect Master</button>
+<label for="sessionTokenInput">Session Token</label><input id="sessionTokenInput" type="text"/>
+<button id="websocketExists" type="button">Websocket Exists</button>
+<br/>
+<button id="posConnect" type="button">Connect as POS</button>
+<button id="posDisconnect" type="button">Disconnect as POS</button>
+
+<div style="padding-top:10px;">Input</div>
+<textarea id="input" wrap="off" style="border: solid 1px black; height:200px; width:800px;"></textarea>
+
+<div style="padding-top:10px;">Output &nbsp;
+	<button id="clearOutput" type="button">Clear</button>
+</div>
+<textarea id="output" readonly wrap="off" style="border: solid 1px black; height:200px; width:800px;"></textarea>
+
+<div style="padding-top:10px;">Samples</div>
+<textarea id="sample" wrap="off" style="border: solid 1px black; height:200px; width:800px;">
+{
+"Action":"Login",
+"Email":"dan@emaginepos.com",
+"Password":"abc",
+"SessionToken":"xxx"
+}
+
+{
+"Action":"SubscribeToNotifications",
+"Notifications":[{"Action":"ServerTimeNotification","Params":{}}],
+"SessionToken":"xxx"
+}
+</textarea>
+
+</body>
+</html>
