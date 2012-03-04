@@ -34,9 +34,11 @@
 <script type="text/javascript" charset="utf-8">
 	// new socket
 	var socket = new WebSocket('ws://192.168.1.31:5150/backofficesocket');
+			console.log(socket)
 			
 	// push a message after the connection is established.
 	socket.onopen = function() {
+		console.log("open success")
 		socket.send('Hello World')
 	};
 			
